@@ -10,16 +10,33 @@ void setup() {
 }
 
 void draw() {
-  if(dist(0,0,mouseX,mouseY)< 30){
+    tail.resize(150,200 );
+  
+  if(dist(0,0,mouseX,mouseY)<30){
     background (donkey); 
+  }
+  
+  else if(dist(454,75,mouseX,mouseY)<30){
+    background(donkey);
   }
   else{ background(#000000);
   }
-  if(mousePressed ){ 
-  }
-image(tail, mouseX, mouseY);
-tail.resize(150,200 );
+  
+ 
+tailX=mouseX;
+  tailY=mouseY;
+  boolean success = false;
+
+     if(mousePressed){
+       success = true;
+     }
+     if(success){
+    image(tail, tailX, tailY);
+     }
+ fill(#000000);
 rect(0, 0, 30, 30);
+fill(#000000);
 rect(454, 75, 40, 40);
 
+         
 }
