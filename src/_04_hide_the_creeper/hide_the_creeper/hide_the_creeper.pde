@@ -1,15 +1,33 @@
-PImage creeper;   
-void setup() { size(1836,1032);
+PImage creeper; 
+int x = 8000;
+int y = 500;
+void setup() { 
+  size(1836,1032);
   PImage minecraft = loadImage("minecraft.png");     
 minecraft.resize(width, height);        
 background(minecraft);            
 creeper=loadImage("creeper.png");   
-    
-}
+
+}   
+
 
 void draw() {   
-  image(creeper, mouseX, mouseY);   
-creeper.resize(50,50);
+ creeper.resize(10,10);
+  image(creeper, 150, 0); 
 
-
+  if(mousePressed){ 
+ boolean nearX = isNear(mouseX,150);
+  boolean nearY = isNear(mouseY,0);
+  if(nearX==true && nearY==true){fill(#00FF63);}
+else{  fill(#FF170A); }
+ ellipse(mouseX,mouseY,15,15);
+   }
+}
+boolean isNear(int a, int b) {
+if (abs(a - b) < 25) {
+     return true;
+}
+else { 
+     return false;
+}
 }
