@@ -6,7 +6,7 @@ package _09_pi_aloud;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class PiAloud {
+public class PiAloud { 
 
 	// 1. Make a main method and make sure your program can run
 

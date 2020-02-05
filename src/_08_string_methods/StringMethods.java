@@ -2,7 +2,7 @@ package _08_string_methods;
 //    Copyright (c) The League of Amazing Programmers 2013-2017
 //    Level 0
 
-
+import javax.swing.JOptionPane;
 
 public class StringMethods {
 	public static void main(String[] args) {
@@ -26,11 +26,14 @@ for (int i = 0; i < a.length(); i++) { System.out.println(a.charAt(i));
 		//    Print the char's position to the console.
 		//    EXAMPLE: if your string is "abc" and you are searching 
 		//             for char 'b', then print "b is at index 1"
-		for (int i =0; i< a.length(); i++) {
+char c	= 'c';	
+for (int i =0; i< a.length(); i++) {  
+			char character = a.charAt(i);
 			
-			
-		}
-
+		
+if(c ==  character) { 
+	System.out.println("c is at index "+i);
+}}
 	}
 }
 
