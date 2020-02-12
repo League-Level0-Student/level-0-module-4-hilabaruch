@@ -1,4 +1,4 @@
-import ddf.minim.*;
+import Minim.minim.*;
 Minim minim = new Minim(this); 
 AudioSample doh;
 AudioSample woohoo;
